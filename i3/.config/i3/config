@@ -20,6 +20,7 @@ set $mod Mod4
 
 # set alias
 set $terminal i3-sensible-terminal
+set $editor i3-sensible-editor
 set $exec exec --no-startup-id
 set $exec_always exec_always --no-startup-id
 
@@ -67,7 +68,7 @@ bindsym XF86AudioLowerVolume $exec "amixer -D pulse sset Master 5%-; notify-send
 # Start Applications
 bindsym $mod+F1 $exec brave
 bindsym $mod+F2 $exec $terminal -e 'ranger'
-bindsym $mod+F3 $exec $terminal -e 'nvim'
+bindsym $mod+F3 $exec $terminal -e $editor
 bindsym $mod+F4 $exec vncviewer
 bindsym $mod+F5 $exec filezilla
 bindsym $mod+Shift+t $exec pkill picom
