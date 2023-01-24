@@ -3,21 +3,21 @@
 
 # SETTINGS {{{ ---
 
-active_text_color="#FF79C6"
+active_text_color="#8BE9FD"
 active_bg=
-active_underline="#FF79C6"
+active_underline="#8BE9FD"
 
 inactive_text_color="#6272A4"
 inactive_bg=
 inactive_underline="#6272A4"
 
 separator=""
-show="window_class" # options: window_title, window_class, window_classname
+show="window_classname" # options: window_title, window_class, window_classname
 forbidden_classes="Polybar Conky Gmrun"
 empty_desktop_message="Nitrocero"
 
-char_limit=10
-max_windows=15
+char_limit=14
+max_windows=5
 char_case="normal" # normal, upper, lower
 add_spaces="true"
 resize_increment=16
