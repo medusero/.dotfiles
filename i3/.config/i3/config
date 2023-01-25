@@ -10,8 +10,8 @@ $exec xautolock -time 20 -locker blurlock
 $exec xmodmap ~/.config/X11/xmodmap
 $exec greenclip daemon
 $exec numlockx
-$exec_always autotiling -w 1 2 3 4 -l 2
 $exec_always picom --experimental-backend
+$exec_always autotiling -w 1 2 3 4 -l 2
 $exec_always feh --bg-fill --no-fehbg ~/.local/share/backgrounds/dracula-gian-galang-01.png --bg-fill --no-fehbg ~/.local/share/backgrounds/dracula-lineas-01.png
 $exec_always ~/.config/polybar/launch.sh
 
