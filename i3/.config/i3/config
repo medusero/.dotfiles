@@ -13,7 +13,7 @@ $exec numlockx
 $exec_always picom --experimental-backend
 $exec_always autotiling -w 1 2 3 4 -l 2
 $exec_always feh --bg-fill --no-fehbg ~/.local/share/backgrounds/dracula-gian-galang-01.png --bg-fill --no-fehbg ~/.local/share/backgrounds/dracula-lineas-01.png
-$exec_always ~/.config/polybar/launch.sh
+$exec_always ~/.config/polybar/launch-i3.sh
 
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
 set $mod Mod4
@@ -203,7 +203,7 @@ assign [class="Darktable"] $ws6
 assign [class="qBittorrent"] $ws7
 assign [class="TelegramDesktop"] $ws7
 assign [class="Steam"] $ws8
-assign [title="Nueva pestaña privada - Brave"] $ws9
+assign [class="Virt-manager"] $ws9
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
@@ -226,28 +226,24 @@ for_window [class="qt6ct"] floating enable sticky enable border normal move posi
 for_window [class="Qtconfig-qt4"] floating enable sticky enable border normal
 for_window [class="(?i)System-config-printer.py"] floating enable border normal
 for_window [class="Timeset-gui"] floating enable border normal
-for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="mpv"] floating enable
 for_window [class="Blueman-manager"] floating enable
 for_window [class="Mediainfo-gui"] floating enable
 
 # Applications in tabbed layout
-for_window [class="realvnc-vncviewer"] layout tabbed
-for_window [class="FileZilla"] layout tabbed
-for_window [class="PeaZip"] layout tabbed
+for_window [class="realvnc-vncviewer"] layout tabbed, focus
+for_window [class="FileZilla"] layout tabbed, focus
+for_window [class="PeaZip"] layout tabbed, focus
+for_window [class="Virt-manager"] layout tabbed, focus
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
 for_window [class="TelegramDesktop"] focus
 for_window [class="qBittorrent"] focus
-for_window [class="FileZilla"] focus
-for_window [class="PeaZip"] focus
 for_window [class="Joplin"] focus
 for_window [class="ghostwriter"] focus
 for_window [class="Steam"] focus
 for_window [class="Darktable"] focus
-for_window [class="realvnc-vncviewer"] focus
-for_window [title="Nueva pestalla privada - Brave"] focus
 
 # fix titlebar bug
 for_window [all] border pixel
