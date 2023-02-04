@@ -59,6 +59,10 @@ setopt SHARE_HISTORY
 #ignore duplicate commands in history file
 setopt hist_ignore_dups
 
+#directory for autocd
+setopt autocd
+cdpath=(/ $HOME/descargas $HOME/.config)
+
 #vi mode
 bindkey -v
 
@@ -88,8 +92,9 @@ extract () {
   fi
 }
 
-#fetch
-ownfetch
+if [[ -x $HOME/.local/bin/ownfetch ]] ; then
+  ownfetch
+fi
 
 #zoxide
 eval "$(zoxide init zsh)"
