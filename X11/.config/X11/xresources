@@ -9,7 +9,7 @@ Xft.lcdfilter: lcddefault
 XTerm*background:        #282a36
 XTerm*foreground:        #f8f8f2
 XTerm*pointerColor:      #8BE9FD
-XTerm*faceName:          Fixed
+XTerm*faceName:          fixed
 XTerm*faceSize:          11
 XTerm*reverseVideo:      on
 XTerm*selectToClipboard: true
