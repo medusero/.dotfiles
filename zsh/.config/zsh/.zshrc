@@ -92,8 +92,11 @@ extract () {
   fi
 }
 
-if [[ -x $HOME/.local/bin/ownfetch ]] ; then
-  ownfetch
+# if [[ -x $HOME/.local/bin/ownfetch ]] ; then
+#   ownfetch
+# fi
+if [[ -x /sbin/nitch ]] ; then
+  nitch
 fi
 
 #zoxide

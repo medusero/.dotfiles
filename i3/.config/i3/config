@@ -3,6 +3,7 @@
 
 # Autostart applications
 #$exec xrandr --output eDP-1 --primary --mode 1920x1080 --pos 1920x466 --rotate normal --output DP-1 --off --output HDMI-1-0 --mode 1920x1080 --pos 0x0 --rotate normal
+#$exec nm-applet
 $exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 $exec xinput set-prop "ELAN0521:01 04F3:31B1 Touchpad" "libinput Natural Scrolling Enabled" 1
 $exec xfce4-power-manager
