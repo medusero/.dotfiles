@@ -69,6 +69,7 @@ bindsym XF86AudioLowerVolume $exec "amixer -D pulse sset Master 5%-; notify-send
 # Start Applications
 bindsym $mod+F1 $exec brave
 bindsym $mod+F2 $exec $terminal -e 'ranger'
+bindsym Mod1+F2 $exec pcmanfm
 bindsym $mod+F3 $exec $terminal -e $editor
 bindsym $mod+F4 $exec vncviewer
 bindsym $mod+F5 $exec filezilla
@@ -298,7 +299,7 @@ bindsym $mod+x $exec blurlock
 
 # Theme colors
 # class                 border  bground text    indicator child_border
-client.focused          #6272A4 #6272A4 #282a36 #6272A4   #50FA7B
+client.focused          #6272A4 #6272A4 #282a36 #50FA7B   #50FA7B
 client.focused_inactive #44475A #44475A #F8F8F2 #44475A   #44475A
 client.unfocused        #282A36 #282A36 #BFBFBF #282A36   #6272A4
 client.urgent           #44475A #FF5555 #F8F8F2 #FF5555   #FF5555
@@ -307,12 +308,12 @@ client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
 client.background       #F8F8F2
 
 # Set inner/outer gaps
-gaps inner 11
+gaps inner 15
 gaps outer 0
 
 # Smart borders (draw borders around container only if it is not the only container on this workspace)
 # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
-smart_borders on
+# smart_borders on
 
 # Press $mod+Shift+g to enter the gap mode. Choose o or i for modifying outer/inner gaps. Press one of + / - (in-/decrement for current workspace) or 0 (remove gaps for current workspace). If you also press Shift with these keys, the change will be global for all workspaces.
 set $mode_gaps Gaps: (o) outer, (i) inner
