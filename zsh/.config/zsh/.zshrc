@@ -33,6 +33,10 @@ if [ -d "$HOME/.local/bin" ] ;
   then PATH="$HOME/.local/bin:$PATH"
 fi
 
+if [ -d "$HOME/.local/appimages/" ] ;
+  then PATH="$HOME/.local/appimages/:$PATH"
+fi
+
 if [ -d "$HOME/.local/share/npm/bin" ] ;
   then PATH="$HOME/.local/share/npm/bin:$PATH"
 fi
@@ -90,6 +94,11 @@ extract () {
   else
       echo "'$1' is not a valid file!"
   fi
+}
+
+#ls after cd
+cdls () {
+  cd "$@" && ls 2>/dev/null;
 }
 
 # if [[ -x $HOME/.local/bin/ownfetch ]] ; then
