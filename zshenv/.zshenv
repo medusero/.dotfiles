@@ -19,6 +19,7 @@ export XINITRC=$XDG_CONFIG_HOME/X11/xinitrc
 export XSERVERRC=$XDG_CONFIG_HOME/X11/xserverrc
 export GTK2_RC_FILES=$XDG_CONFIG_HOME/gtk-2.0/gtkrc
 export QT_QPA_PLATFORMTHEME=qt5ct
+export QT_STYLE_OVERRIDE=kvantum
 export GNUPGHOME=$XDG_DATA_HOME/gnupg
 
 # Programmer languages
@@ -31,8 +32,8 @@ export CARGO_HOME=$XDG_DATA_HOME/cargo
 export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
 
 # FZF
-export FZF_DEFAULT_COMMAND='rg --hidden --ignore .git -g ""'
-export FZF_DEFAULT_OPTS='--color=fg:#f8f8f2,bg:#282a36,hl:#bd93f9 --color=fg+:#f8f8f2,bg+:#44475a,hl+:#bd93f9 --color=info:#ffb86c,prompt:#50fa7b,pointer:#ff79c6 --color=marker:#ff79c6,spinner:#ffb86c,header:#6272a4'
+export FZF_DEFAULT_COMMAND='fd --hidden --exclude ".cache"'
+export FZF_DEFAULT_OPTS='--multi --height=50% --pointer='' --marker='' --border=bold --margin=0%,2%,5%,2% --color=fg:#f8f8f2,bg:#282a36,hl:#bd93f9 --color=fg+:#f8f8f2,bg+:#44475a,hl+:#bd93f9 --color=info:#ffb86c,prompt:#50fa7b,pointer:#ff79c6 --color=marker:#ff79c6,spinner:#ffb86c,header:#6272a4'
 
 # Programs
 export RIPGREP_CONFIG_PATH=$XDG_CONFIG_HOME/ripgrep/ripgreprc
