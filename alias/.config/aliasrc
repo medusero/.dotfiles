@@ -1,0 +1,77 @@
+#list
+alias ls='ls -lah --color=always --group-directories-first'
+alias exa='exa -lah --group-directories-first'
+alias tree='tree -C'
+alias tree2='tree -C -L 2'
+alias tree3='tree -C -L 3'
+alias tree4='tree -C -L 4'
+
+#pacman and paru
+alias repo-i="paru -Sl | awk '{print \$2(\$4==\"\" ? \"\" : \" *\")}' | fzf -m --preview 'paru -Si {1}' | cut -d \" \" -f 1 | xargs -ro paru -S"
+alias unlock='sudo rm /var/lib/pacman/db.lck'
+alias orphan='pacman -Qtdq'
+alias autoremove='sudo pacman -Rns $(pacman -Qtdq)'
+
+#directories and files
+alias cp='cp -i -v'
+alias mv='mv -i -v'
+alias mkdir='mkdir -p -v'
+alias rmdir='rm -r'
+alias ..='cd ..'
+
+# Colorize the grep command output for ease of use (good for log files)##
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+
+#edit system configuration files
+alias nly='sudoedit /etc/ly/xsetup.sh'
+alias nlxdm='sudoedit /etc/lxdm/lxdm.conf'
+alias nlightdm='sudoedit /etc/lightdm/lightdm.conf'
+alias npacman='sudoedit /etc/pacman.conf'
+alias ngrub='sudoedit /etc/default/grub'
+alias nconfgrub='sudoedit /boot/grub/grub.cfg'
+alias nmkinitcpio='sudoedit /etc/mkinitcpio.conf'
+alias nmirrorlist='sudoedit /etc/pacman.d/mirrorlist'
+alias narcomirrorlist='sudoedit /etc/pacman.d/arcolinux-mirrorlist'
+alias nsddm='sudoedit /etc/sddm.conf'
+alias nsddmk='sudoedit /etc/sddm.conf.d/kde_settings.conf'
+alias nfstab='sudoedit /etc/fstab'
+alias nnsswitch='sudoedit /etc/nsswitch.conf'
+alias nsamba='sudoedit /etc/samba/smb.conf'
+alias ngnupgconf='sudoedit /etc/pacman.d/gnupg/gpg.conf'
+alias nhosts='sudoedit /etc/hosts'
+alias nhostname='sudoedit /etc/hostname'
+
+#same but with user files
+alias nb='$EDITOR ~/.bashrc'
+alias nzr='$EDITOR ~/.config/zsh/.zshrc'
+alias nze='$EDITOR ~/.zshenv'
+alias nf='$EDITOR ~/.config/fish/config.fish'
+alias nalias='$EDITOR ~/.config/aliasrc'
+alias nneofetch='$EDITOR ~/.config/neofetch/config.conf'
+alias ni3='$EDITOR ~/.config/i3'
+alias nawesome='$EDITOR ~/.config/awesome/rc.lua'
+alias nqtile='$EDITOR ~/.config/qtile/config.py'
+alias nnvim='$EDITOR ~/.config/nvim/lua/user/'
+alias nalacritty='$EDITOR ~/.config/alacritty/alacritty.yml'
+alias npicom='$EDITOR ~/.config/picom/picom.conf'
+alias ndunst='$EDITOR ~/.config/dunst/dunstrc'
+alias nranger='$EDITOR ~/.config/ranger'
+alias npolybar='$EDITOR ~/.config/polybar'
+alias nrofi='$EDITOR ~/.config/rofi/config.rasi'
+alias nkitty='$EDITOR ~/.config/kitty/kitty.conf'
+
+#sufix aliases
+alias -s {.pdf,.cbz,.cbr}='zathura'
+alias -s {sh,conf,py}='nvim'
+
+#rsync
+alias rs-local='rsync -avR .ssh/ .dotfiles/ /data/respaldos/nitrocero_$(date +%Y-%m-%d-%H:%M)'
+
+#misc
+alias wget='wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"'
+alias qtileconf='python3 ~/.config/qtile/config.py && qtile cmd-obj -o cmd -f validate_config'
+alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
+alias mocp='mocp -M ~/.config/moc'
+#alias cl='clear && ownfetch'
